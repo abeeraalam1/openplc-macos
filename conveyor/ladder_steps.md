@@ -80,11 +80,3 @@ python3 conveyor.py sim       # hands-free: start, send boxes until the batch st
 
 Expected: `start` turns the motor on, five `part`s stop it with BATCH DONE,
 `start` does nothing until `reset`.
-
-## Gotchas we hit
-
-- Paste the ASCII diagrams nowhere: they become rung comments. Drag real contacts/coils onto the rung.
-- `stop_btn` and `batch_done` must be **Negated** contacts, and Q needs a real `batch_done` coil.
-- New project = redo **Device > Configuration** (127.0.0.1:8443) and enable **Modbus TCP** under Servers.
-- "Unknown program type ... in program instance": in **Resource > Instances**, set the Program
-  column to your POU name (and don't give the instance the same name as the program).
